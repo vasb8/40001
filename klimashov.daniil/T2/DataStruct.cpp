@@ -17,7 +17,7 @@ std::string formatDouble(double value) {
 
 std::istream& operator>>(std::istream& in, DelimiterIO&& dest)
 {
-    char c;
+    char c = '\0';
     in >> c;
     if (c != dest.exp) in.setstate(std::ios::failbit);
     return in;
