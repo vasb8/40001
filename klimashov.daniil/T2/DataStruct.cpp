@@ -57,7 +57,6 @@ std::istream& operator>>(std::istream& in, DataStruct& dest)
 {
     DataStruct tmp{};
     in >> DelimiterIO{'('} >> DelimiterIO{':'};
-    
     for (int i = 0; i < 3; ++i) {
         std::string label;
         if (!(in >> label)) { in.setstate(std::ios::failbit); return in; }
